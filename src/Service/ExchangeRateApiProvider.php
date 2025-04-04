@@ -6,9 +6,7 @@ use RuntimeException;
 
 class ExchangeRateApiProvider implements RateProviderInterface
 {
-
     private const string API_URL = 'https://api.apilayer.com/exchangerates_data/latest';
-
 
     public function getRate(string $currency): float
     {

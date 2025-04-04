@@ -11,12 +11,10 @@ use PHPUnit\Framework\TestCase;
 
 class CommissionCalculatorTest extends TestCase
 {
-
     protected function tearDown(): void
     {
         m::close();
     }
-
 
     public function testCalculateForEuCountry()
     {

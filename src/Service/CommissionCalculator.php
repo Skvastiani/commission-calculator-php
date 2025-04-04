@@ -6,7 +6,6 @@ use App\Model\Transaction;
 
 class CommissionCalculator
 {
-
     private const array EU_COUNTRIES = [
         'AT',
         'BE',
@@ -39,10 +38,9 @@ class CommissionCalculator
 
 
     public function __construct(
-        private readonly BinProviderInterface  $binProvider,
+        private readonly BinProviderInterface $binProvider,
         private readonly RateProviderInterface $rateProvider
-    )
-    {
+    ) {
     }
 
 

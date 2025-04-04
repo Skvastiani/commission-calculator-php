@@ -6,8 +6,7 @@ use RuntimeException;
 
 class BinListProvider implements BinProviderInterface
 {
-
-    const string BIN_LIST_URL = 'https://lookup.binlist.net/';
+    private const string BIN_LIST_URL = 'https://lookup.binlist.net/';
 
     public function getCountryCode(string $bin): string
     {
