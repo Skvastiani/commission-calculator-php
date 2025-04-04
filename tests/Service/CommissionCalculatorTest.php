@@ -2,19 +2,21 @@
 
 namespace Tests\Service;
 
-use PHPUnit\Framework\TestCase;
-use App\Service\CommissionCalculator;
-use App\Service\BinProviderInterface;
-use App\Service\RateProviderInterface;
 use App\Model\Transaction;
+use App\Service\BinProviderInterface;
+use App\Service\CommissionCalculator;
+use App\Service\RateProviderInterface;
 use Mockery as m;
+use PHPUnit\Framework\TestCase;
 
 class CommissionCalculatorTest extends TestCase
 {
+
     protected function tearDown(): void
     {
         m::close();
     }
+
 
     public function testCalculateForEuCountry()
     {
@@ -30,6 +32,7 @@ class CommissionCalculatorTest extends TestCase
 
         $this->assertEquals(1.00, $result);
     }
+
 
     public function testCalculateForNonEuCountry()
     {
